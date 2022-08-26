@@ -1,8 +1,5 @@
 {
     "version": 2,
-    "env": {
-        "TEKS": "@hello_world"
-    },
     "builds": [
         {
             "src": "src/main.ts",
