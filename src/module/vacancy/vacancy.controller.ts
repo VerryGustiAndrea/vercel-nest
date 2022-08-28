@@ -17,7 +17,7 @@ import {
 } from '@nestjs/common';
 import {
   VacancyService,
-} from '@/services';
+} from './vacancy.service';
 import {
   ApiBearerAuth,
   ApiBody,
@@ -29,7 +29,7 @@ import {
 
 @ApiTags('vacancy')
 @Controller('/vacancy')
-export default class VacancyController {
+export class VacancyController {
   constructor(
     private readonly vacancyService: VacancyService,
   ) { }

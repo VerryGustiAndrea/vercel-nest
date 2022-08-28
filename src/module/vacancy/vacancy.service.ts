@@ -14,10 +14,10 @@ const { Op } = require("sequelize");
 
 
 @Injectable()
-export default class VacancyService {
+export class VacancyService {
   constructor(
     @InjectModel(Vacancy) public vacancyModel: typeof Vacancy,
-    public readonly mailerService: MailerService,
+    // public readonly mailerService: MailerService,
   ) {
   }
 

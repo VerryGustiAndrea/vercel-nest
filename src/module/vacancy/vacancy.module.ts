@@ -1,6 +1,6 @@
   import { Module, forwardRef } from '@nestjs/common';
-import { VacancyController } from '@/controllers';
-import { VacancyService } from '@/services';
+import { VacancyController } from './vacancy.controller';
+import { VacancyService } from './vacancy.service';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { Vacancy } from './vacancy.model';
 
@@ -13,4 +13,4 @@ import { Vacancy } from './vacancy.model';
   providers: [VacancyService],
   exports: [VacancyService],
 })
-export default class VacancyModule { }
+export class VacancyModule { }

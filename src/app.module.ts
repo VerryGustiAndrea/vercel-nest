@@ -1,9 +1,10 @@
-import { Module } from '@nestjs/common';
+import { Module, forwardRef } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { MailerModule } from '@nestjs-modules/mailer';
+import { VacancyModule } from './module/vacancy/vacancy.module';
 
 
 @Module({
@@ -21,8 +22,9 @@ import { MailerModule } from '@nestjs-modules/mailer';
       logging: false,
     }),
   
+    forwardRef(() => VacancyModule),
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export default class AppModule {}
+export class AppModule {}

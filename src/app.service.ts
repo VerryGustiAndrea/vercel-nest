@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'testing'+ process.env.TEKS;
+    return 'testing'+process.env.MYSQL_HOST;
     
   }
 }
