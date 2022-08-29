@@ -9,20 +9,20 @@ import { VacancyModule } from './module/vacancy/vacancy.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
-    SequelizeModule.forRoot({
-      dialect: 'mysql',
-      host: process.env.MYSQL_HOST,
-      port: Number(process.env.MYSQL_PORT),
-      username: process.env.MYSQL_USERNAME,
-      password: process.env.MYSQL_PASSWORD,
-      database: process.env.MYSQL_DATABASE,
-      synchronize: true,
-      autoLoadModels: true,
-      logging: false,
-    }),
+    // ConfigModule.forRoot(),
+    // SequelizeModule.forRoot({
+    //   dialect: 'mysql',
+    //   host: process.env.MYSQL_HOST,
+    //   port: Number(process.env.MYSQL_PORT),
+    //   username: process.env.MYSQL_USERNAME,
+    //   password: process.env.MYSQL_PASSWORD,
+    //   database: process.env.MYSQL_DATABASE,
+    //   synchronize: true,
+    //   autoLoadModels: true,
+    //   logging: false,
+    // }),
   
-    forwardRef(() => VacancyModule),
+    // forwardRef(() => VacancyModule),
   ],
   controllers: [AppController],
   providers: [AppService],
